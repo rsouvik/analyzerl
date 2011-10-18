@@ -1,0 +1,3 @@
+wordfreq	;aggregrator,0;
+wordfreqsort	;sorter,"";
+wordfreqmergesort	;mergesorter,"";

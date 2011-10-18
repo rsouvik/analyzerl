@@ -1,0 +1,6 @@
+1) User module generates events which are routed to EventManager
+   EventManager has handlers for regular event distribution, logging etc.
+   Routes events using routing module in NM
+2) NetworkManager manages cluster membership and management and routing
+3) ComputingElement is the intelligent node and does event processing using 
+   registered user handlers
