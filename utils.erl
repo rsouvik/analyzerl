@@ -13,7 +13,9 @@
 %%% Revision 1.0 Author: Souvik Ray (rsouvik@gmail.com)
 %%%--------------------------------------------------------------------- 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Util functions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 -module(utils).
 -compile(export_all).
