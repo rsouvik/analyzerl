@@ -4,3 +4,10 @@
 2) NetworkManager manages cluster membership and management and routing
 3) ComputingElement is the intelligent node and does event processing using 
    registered user handlers
+
+TBD:
+1) Logging locks
+2) Exception handling
+3) Distributed erl
+4) Cluster Mgmt
+5) Serializing
