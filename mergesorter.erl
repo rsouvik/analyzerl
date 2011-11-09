@@ -30,13 +30,21 @@ terminate() ->
 %Each time a new partially sorted list comes in, it is mergesorted with the 
 %existing list and topN list is stored
 handle_event(EventData, Data) ->
-  NewData = lists:sublist(utils:mergesort(EventData, Data),1,10),
+  DataPruned = lists:reverse(lists:keysort(2,utils:pruneList(EventData,Data))),
+  if
+    length(DataPruned)==0 ->
+        NewData = lists:reverse(lists:keysort(2, EventData));
+    true -> 
+  %NewData = lists:sublist(utils:mergesort(EventData, Data),1,10),
+        NewData = lists:sublist(utils:mergesort(EventData, DataPruned),1,10)
+  end,
   NewData.  
 
 %Whenever output is called, sort the Data dict and output partial sorted list
 %serialization/deserialization required ?
 output(Data) ->
-  {Data}.
+  %{lists:sublist(Data,1,10)}.
+   {Data}.
 
 printState(Data) ->
  "".
